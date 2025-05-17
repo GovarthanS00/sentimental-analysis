@@ -65,11 +65,11 @@ def analyze_sentiment(text):
     prediction = model.predict([text])[0]
     return prediction
 
-if _name_ == "_main_":
+if __name__ == "__main__":
     print("\nSentiment Analysis Ready (positive / negative / neutral). Type 'quit' to exit.")
     while True:
         user_input = input("Enter a sentence for sentiment analysis: ")
         if user_input.lower() == 'quit':
             break
         sentiment = analyze_sentiment(user_input)
-        print(f"Predicted Sentiment: {sentiment}\n"
+        print(f"Predicted Sentiment: {sentiment}\n")
